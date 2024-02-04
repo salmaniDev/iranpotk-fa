@@ -1,0 +1,61 @@
+.services {
+    margin-bottom: 100px;
+    @media screen and (max-width:991px) {
+        margin-bottom: 50px;
+    }
+
+
+    // .item {
+    //     display: block;
+    //     background: #fff;
+    //     padding: 30px 0px;
+    //     border-radius: 16px;
+    //     box-shadow: 5px 5px 19px 4px rgb(2 18 34 / 11%);
+    //     transition: $transition;
+
+    //     &:hover {
+    //         background: $red3;
+
+    //         .icon {
+    //             background: #3a3a3a4f;
+    //             color: #fff;
+    //         }
+
+    //         .lable,
+    //         .title {
+    //             color: #fff;
+    //         }
+    //     }
+
+    //     .icon {
+    //         display: block;
+    //         font-size: 45px;
+    //         padding: 20px 25px;
+    //         transition: all .3s ease-in-out;
+    //         background: #eee;
+    //         margin-bottom: 25px;
+    //         transition: $transition;
+    //     }
+
+    //     .lable {
+    //         font-size: 11px;
+    //         color: $desc5;
+    //         padding-right: 30px;
+    //         margin-bottom: 20px;
+    //         display: block;
+    //         font-weight: 200;
+    //         transition: $transition;
+    //     }
+
+    //     .title {
+    //         font-size: 15px;
+    //         padding-right: 30px;
+    //         color: $black;
+    //         transition: $transition;
+    //     }
+    // }
+
+    .image {
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,91 @@
+.laboratory {
+    margin-top: 132px;
+    margin-bottom: 100px;
+
+    .headlines {
+        li {
+            &.last {
+                background-color: #ee1d23;
+
+                h2 {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .item {
+        margin-bottom: 85px;
+
+        &#about {
+            margin-top: 60px;
+        }
+
+        &#table {
+            form {
+                .input_box {
+
+                    input,
+                    select,
+                    textarea {
+                        background-color: #fff;
+                    }
+
+                    .icon {
+                        bottom: 30%;
+                    }
+                }
+
+                .form_bottom {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-direction: column;
+
+                    .captcha {
+                        width: 31%;
+                    }
+
+                    .link-btn {
+                        width: 31%;
+                    }
+                }
+            }
+        }
+
+        .top_title {
+            text-align: center;
+            color: $red;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        p {
+            color: $desc5;
+            line-height: 2.5;
+            font-size: 15px;
+        }
+
+        ul {
+            margin-top: 10px;
+            margin-right: 35px;
+
+            li {
+                font-size: 15px;
+                color: #464646;
+                margin-bottom: 10px;
+                list-style: auto;
+            }
+        }
+
+        .images {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            img {
+                width: 33%;
+            }
+        }
+    }
+}

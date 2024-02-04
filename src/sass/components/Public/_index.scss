@@ -1,0 +1,25 @@
+@import "./navbar";
+@import "./footer";
+@import "./breadcrumbs";
+@import "./tabbar";
+@import "../Utils/index";
+@import "./calendar";
+
+.img-fluid {
+    height: auto;
+    width: 100%;
+}
+.ssc-square {
+    height: 100% !important;
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        background: #f3f3f3;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        border: 2.5px solid #fff;
+    }
+}

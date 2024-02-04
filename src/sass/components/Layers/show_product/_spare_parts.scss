@@ -1,0 +1,40 @@
+.spare_parts {
+
+    @media screen and (max-width:767px) {
+        .item {
+            .title {
+                font-size: 13px !important;
+            }
+        }
+    }
+
+    .item {
+        text-align: center;
+        display: block;
+        box-shadow: 0px 2px 9px 0px rgb(192 192 192 / 48%);
+        margin-bottom: 30px;
+        padding: 10px 0;
+
+        &:hover {
+            .image {
+                transform: scale(1.1);
+            }
+        }
+
+        .image {
+            width: 75%;
+            transition: $transition;
+        }
+
+        .title {
+            font-weight: 200;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: $red;
+            font-size: 14px;
+        }
+    }
+}

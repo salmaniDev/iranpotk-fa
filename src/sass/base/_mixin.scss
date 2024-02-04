@@ -1,0 +1,58 @@
+@mixin product_box {
+    flex-shrink: 0;
+    background-color: #fff;
+    margin-left: 15px;
+    text-align: center;
+    width: 200px;
+    padding: 30px 0;
+    box-shadow: 0px 3px 9px rgb(192 192 192 / 48%);
+    position: relative;
+    z-index: 1;
+
+    &:last-child {
+        margin-left: 0;
+    }
+
+    // &:hover {
+    //     cursor: grab;
+
+    //     &::after {
+    //         // background-color: $red3;
+    //         height: 100px;
+    //     }
+    // }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 58%;
+        right: 50%;
+        transform: translate(50%, 50%);
+        width: 175px;
+        height: 60px;
+        background-color: $bg3;
+        z-index: -1;
+        transition: $transition;
+    }
+
+    .image {
+        width: 150px;
+    }
+
+    .title {
+        color: $desc2;
+        font-weight: 100;
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .price {
+        color: $red;
+        font-size: 15px;
+        span{
+            color: $desc;
+            margin-right: 18px;
+            font-size: 14px;
+        }
+    }
+}

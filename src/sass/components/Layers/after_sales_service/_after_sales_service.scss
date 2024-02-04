@@ -1,0 +1,93 @@
+.after_sales_service {
+    margin-top: 50px;
+    margin-bottom: 200px;
+
+    .section_head {
+        margin-bottom: 30px;
+    }
+
+    .info_box {
+        p {
+            line-height: 2.5;
+            font-size: 16px;
+            color: #717C85;
+            margin-bottom: 13px;
+
+            span {
+                color: #000;
+                font-weight: 200;
+            }
+        }
+
+        ul {
+            margin-right: 25px;
+
+            li {
+                font-size: 15px;
+                color: #464646;
+                margin-bottom: 10px;
+                list-style: auto;
+
+                a {
+                    color: $red;
+                    font-weight: 200;
+                }
+            }
+        }
+
+        .image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    }
+}
+
+
+.sales_form {
+    margin-bottom: 100px;
+    position: relative;
+    padding-top: 50px;
+
+    &::after {
+        content: "";
+        background-image: url('../dist/images/afterbg2.svg');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -100px;
+        right: -3px;
+        width: 100%;
+        height: 200px;
+    }
+
+    .form_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .captcha {
+            width: 31%;
+        }
+
+        .link-btn {
+            width: 31%;
+        }
+    }
+
+
+    .input_box {
+
+        input,
+        select,
+        textarea {
+            background-color: #fff;
+        }
+
+        .icon {
+            bottom: 30%;
+        }
+    }
+}

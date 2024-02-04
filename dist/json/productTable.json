@@ -1,0 +1,154 @@
+{
+    "header": [
+        {
+            "faTitle": "کد",
+            "title": "code"
+        },
+        {
+            "faTitle": "عکس محصول",
+            "title": "image"
+        },
+        {
+            "faTitle": "طول (mm)",
+            "title": "tool",
+            "subMenu": [
+                {
+                    "name": "همه"
+                },
+                {
+                    "name": "310"
+                },
+                {
+                    "name": "370"
+                },
+                {
+                    "name": "390"
+                },
+                {
+                    "name": "400"
+                }
+            ]
+        },
+        {
+            "faTitle": "وزن (g)",
+            "title": "weight",
+            "subMenu": [
+                {
+                    "name": "همه"
+                },
+                {
+                    "name": "330"
+                },
+                {
+                    "name": "575"
+                },
+                {
+                    "name": "800"
+                },
+                {
+                    "name": "428"
+                }
+            ]
+        },
+        {
+            "faTitle": "سایز (oz)",
+            "title": "size",
+            "subMenu": [
+                {
+                    "name": "همه"
+                },
+                {
+                    "name": "8"
+                },
+                {
+                    "name": "17"
+                },
+                {
+                    "name": "24"
+                },
+                {
+                    "name": "32"
+                },
+                {
+                    "name": "17"
+                },
+                {
+                    "name": "24"
+                },
+                {
+                    "name": "32"
+                }
+            ]
+        },
+        {
+            "faTitle": "قیمت (ریال)",
+            "title": "price"
+        },
+        {
+            "faTitle": "خرید",
+            "title": "stock"
+        }
+    ],
+    "items": [
+        {
+            "code": "AK 0810",
+            "image": "./img/products/1.png",
+            "tool": "310",
+            "weight": "330",
+            "size": "8",
+            "price": 1210000,
+            "config": {
+                "stock": true,
+                "purchaseLink": "#"
+            }
+        },
+        {
+            "code": "AK 1610",
+            "image": "./img/products/2.png",
+            "tool": "370",
+            "weight": "575",
+            "size": "17",
+            "price": 1660000,
+            "config": {
+                "stock": true,
+                "purchaseLink": "#"
+            }
+        },
+        {
+            "code": "AK 1610",
+            "image": "./img/products/2.png",
+            "tool": "370",
+            "weight": "575",
+            "size": "17",
+            "price": 1660000,
+            "config": {
+                "stock": true,
+                "purchaseLink": "#"
+            }
+        },
+        {
+            "code": "AK 2410",
+            "image": "./img/products/3.png",
+            "tool": "390",
+            "weight": "800",
+            "size": "24",
+            "price": 1940000,
+            "config": {
+                "stock": false,
+                "purchaseLink": "#"
+            }
+        },
+        {
+            "code": "AK 3210",
+            "image": "./img/products/4.png",
+            "tool": "400",
+            "weight": "428",
+            "size": "32",
+            "price": 2290000,
+            "config": {
+                "stock": false,
+                "purchaseLink": "#"
+            }
+        }
+    ]
+}

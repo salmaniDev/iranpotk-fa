@@ -1,0 +1,88 @@
+.faq {
+    margin-top: 50px;
+    margin-bottom: 170px;
+
+    @media screen and (max-width:767px){
+        margin-top: 35px;
+        margin-bottom: 45px;
+
+        .faq_items{
+            margin-bottom: 55px;
+
+            .item{
+                margin-bottom: 12px !important;
+            }
+        }
+    }
+
+    .faq_items {
+        .item {
+            height: 60px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: $transition;
+            background-color: $bg7;
+            padding: 19px 15px;
+            cursor: pointer;
+
+            &.active {
+                .head {
+                    .title {
+                        color: $red;
+                    }
+
+                    .icon {
+                        &::before {
+                            content: "\ea0b";
+                        }
+                    }
+                }
+            }
+
+            .head {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .icon {
+                    vertical-align: middle;
+                    font-size: 10px;
+                    color: $red;
+                    margin-top: 6px;
+                }
+
+                .title {
+                    color: $black;
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                    font-weight: 200;
+                    transition: $transition;
+
+                    @media screen and (max-width:767px) {
+                        font-size: 12px;
+                        padding-left: 10px;
+                    }
+                }
+
+            }
+
+            .info {
+
+                .desc {
+                    font-size: 14px;
+                    line-height: 2.3;
+                    color: $desc5;
+                }
+            }
+        }
+    }
+}

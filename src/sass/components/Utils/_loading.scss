@@ -1,0 +1,63 @@
+.loading{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.L{
+        >.box {
+            height: 80px;
+            >svg{
+                height: 80px;
+            }
+        }   
+    }
+    &.M{
+        >.box {
+            height: 50px;
+            >svg{
+                height: 50px;
+            }
+        }   
+    }
+    &.N{
+        >.box {
+            height: 35px;
+            >svg{
+                height: 35px;
+            }
+        }   
+    }
+    &.S{
+        >.box {
+            height: 25px;
+            >svg{
+                height: 25px;
+            }
+        }   
+    }
+    &.VS{
+        >.box {
+            height: 16px;
+            >svg{
+                height: 16px;
+            }
+        }   
+    }
+    >.box {
+        animation: loading-rotate 1.4s linear infinite;
+        >svg{
+            .circle {
+                stroke: currentColor;
+                animation: loading-dash 1.4s ease-in-out infinite;
+                stroke-dasharray: 80px, 200px;
+                stroke-dashoffset: 0px;
+            }
+        }
+    }
+}
+

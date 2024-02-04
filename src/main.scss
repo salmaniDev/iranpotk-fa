@@ -1,0 +1,354 @@
+//////////// Import Base Setting
+@import "./sass/base/setting";
+@import "./sass/base/mixin";
+@import "./sass/base/base";
+@import "./sass/base/grid";
+@import "./sass/base/slick";
+
+
+//////////// Atoms
+@import "./sass/components/Layers/index";
+@import "./sass/components/Public/index";
+
+@font-face {
+  font-family: otfFont;
+  src: url('../dist/fonts/otf/VitesseSans-Bold.otf') ;
+}
+
+@font-face {
+  font-family: dana5;
+  font-style: normal;
+  font-weight: 100;
+  src: url('../dist/fonts/woff2/Dana-Regular.woff2') format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+    url('../dist/fonts/woff/Dana-Regular.woff') format('woff');
+  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+  font-family: dana5;
+  font-style: normal;
+  font-weight: 200;
+  src: url('../dist/fonts/woff2/Dana-Medium.woff2') format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+    url('../dist/fonts/woff/Dana-Medium.woff') format('woff');
+  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+  font-family: dana5;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../dist/fonts/woff2/Dana-Bold.woff2') format('woff2'),
+    /* FF39+,Chrome36+, Opera24+*/
+    url('../dist/fonts/woff/Dana-Bold.woff') format('woff');
+  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../dist/fonts/icomoon.eot?k0f1dd');
+  src:  url('../dist/fonts/icomoon.eot?k0f1dd#iefix') format('embedded-opentype'),
+    url('../dist/fonts/icomoon.ttf?k0f1dd') format('truetype'),
+    url('../dist/fonts/icomoon.woff?k0f1dd') format('woff'),
+    url('../dist/fonts/icomoon.svg?k0f1dd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-rubika:before {
+  content: "\e901";
+}
+.icon-Delete:before {
+  content: "\e902";
+}
+.icon-messages-bubble:before {
+  content: "\e903";
+}
+.icon-Delivery-Box:before {
+  content: "\e904";
+}
+.icon-Message:before {
+  content: "\e905";
+}
+.icon-Logout:before {
+  content: "\e906";
+}
+.icon-Location:before {
+  content: "\e907";
+}
+.icon-mobile:before {
+  content: "\e908";
+}
+.icon-grouping:before {
+  content: "\e909";
+}
+.icon-email:before {
+  content: "\e90a";
+}
+.icon-phone:before {
+  content: "\e90b";
+}
+.icon-telephone:before {
+  content: "\e90c";
+}
+.icon-Time-Circle:before {
+  content: "\e90d";
+}
+.icon-share:before {
+  content: "\e90e";
+}
+.icon-heart:before {
+  content: "\e90f";
+}
+.icon-cross:before {
+  content: "\e910";
+}
+.icon-application:before {
+  content: "\e911";
+}
+.icon-search:before {
+  content: "\e912";
+}
+.icon-arrow_left:before {
+  content: "\e913";
+}
+.icon-arrow_right:before {
+  content: "\e914";
+}
+.icon-shoo-cart:before {
+  content: "\e916";
+}
+.icon-user:before {
+  content: "\e917";
+}
+.icon-list:before {
+  content: "\e918";
+}
+.icon-play:before {
+  content: "\e919";
+}
+.icon-like:before {
+  content: "\e91a";
+}
+.icon-dislike:before {
+  content: "\e91b";
+}
+.icon-reply:before {
+  content: "\e91c";
+}
+.icon-Airdrop:before {
+  content: "\e91d";
+}
+.icon-Building:before {
+  content: "\e91e";
+}
+.icon-Chemistry-flask:before {
+  content: "\e91f";
+}
+.icon-Church:before {
+  content: "\e920";
+}
+.icon-Delivery-hand-send:before {
+  content: "\e921";
+}
+.icon-Calling:before {
+  content: "\e922";
+}
+.icon-Car:before {
+  content: "\e923";
+}
+.icon-Post-motor:before {
+  content: "\e924";
+}
+.icon-Store:before {
+  content: "\e925";
+}
+.icon-email-ground:before {
+  content: "\e926";
+}
+.icon-email-open-3:before {
+  content: "\e927";
+}
+.icon-Facebook-1:before {
+  content: "\e928";
+}
+.icon-Headphone:before {
+  content: "\e929";
+}
+.icon-Ringtone:before {
+  content: "\e92a";
+}
+.icon-details:before {
+  content: "\e92c";
+}
+.icon-Telephone:before {
+  content: "\e92d";
+}
+.icon-Twitter-1:before {
+  content: "\e92e";
+}
+.icon-whatsapp1:before {
+  content: "\e92f";
+}
+.icon-shareup:before {
+  content: "\e930";
+}
+.icon-box-seam:before {
+  content: "\e931";
+}
+.icon-cart-check:before {
+  content: "\e932";
+}
+.icon-truck:before {
+  content: "\e933";
+}
+.icon-wallet:before {
+  content: "\e934";
+}
+.icon-filter:before {
+  content: "\e935";
+}
+.icon-mobile1:before {
+  content: "\e936";
+}
+.icon-Gallery:before {
+  content: "\e937";
+}
+.icon-View_360:before {
+  content: "\e938";
+}
+.icon-aparat1:before {
+  content: "\e939";
+}
+.icon-facebook:before {
+  content: "\e93a";
+}
+.icon-telegram1:before {
+  content: "\e93b";
+}
+.icon-bookmark:before {
+  content: "\e9d2";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-arrowR:before {
+  content: "\ea3c";
+}
+.icon-arrowL:before {
+  content: "\ea40";
+}
+.icon-share2:before {
+  content: "\ea82";
+}
+.icon-instagram1:before {
+  content: "\ea92";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-instagram:before {
+  content: "\e900";
+}
+.icon-telegram:before {
+  content: "\e915";
+}
+.icon-aparat:before {
+  content: "\e92b";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+
+
+
+@font-face {
+  font-family: 'iranpotk';
+  src:  url('../dist/fonts/iranpotk.ttf'),
+    url('../dist/fonts/iranpotk.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ip_"], [class*=" ip_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iranpotk' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none; 
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.ip_adjustable-spanner:before {
+  content: "\e900";}
+
+.ip_chisel:before {
+  content: "\e902";
+}
+.ip_hammer:before {
+  content: "\e906";
+}
+.ip_toolbox:before {
+  content: "\e90b";
+}
+.ip_screwdriver:before {
+  content: "\e90e";
+}
+.ip_sealant-gun:before {
+  content: "\e90f";
+}
+.ip_table:before {
+  content: "\e910";
+}
+.ip_wheel-barrow:before {
+  content: "\e911";
+}
+.ip_06:before {
+  content: "\e912";
+}
+.ip_scraper:before {
+  content: "\e913";
+}
+.ip_hammer_1:before {
+  content: "\e914";
+}
+.ip_clamp:before {
+  content: "\e915";
+}
+.ip_allen-keys:before {
+  content: "\e916";
+}
+.ip_cutter:before {
+  content: "\e917";
+}

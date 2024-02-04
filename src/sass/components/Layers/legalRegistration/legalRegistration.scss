@@ -1,0 +1,50 @@
+.legalRegistration {
+    margin-top: 40px;
+    margin-bottom: 180px;
+
+    @media screen and (max-width:991px) {
+        margin-bottom: 110px;
+    }
+
+    @media screen and (max-width:479px) {
+        .form_bottom {
+            flex-direction: column !important;
+
+            .captcha {
+                margin-bottom: 10px !important;
+                width: 100% !important;
+
+                input {
+                    width: 100% !important;
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
+
+    .form_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 30px;
+
+        .captcha {
+            img {
+                height: 50px;
+                background-color: #f7f7f7;
+                padding: 4px;
+                margin-left: 0px !important;
+            }
+
+            input {
+                border-right: 1px solid #888;
+                width: 196px;
+                height: 54px;
+                margin-left: 10px;
+            }
+        }
+    }
+}

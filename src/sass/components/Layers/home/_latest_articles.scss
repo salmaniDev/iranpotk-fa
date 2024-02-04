@@ -1,0 +1,128 @@
+.latest_articles {
+    margin-bottom: 100px;
+
+    @media screen and (max-width:991px) {
+        margin-bottom: 100px;
+    }
+
+    @media screen and (max-width:767px) {
+        .slider {
+            padding-bottom: 0 !important;
+        }
+
+
+        .row {
+            white-space: nowrap;
+            overflow-x: scroll;
+            flex-wrap: unset;
+            padding-bottom: 20px;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .item {
+                width: 250px !important;
+                white-space: normal;
+                box-shadow: unset !important;
+                border: 1px solid #d4d4d4;
+                margin: 0 8px !important;
+            }
+        }
+    }
+
+    .section_head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width:767px) {
+            justify-content: center;
+
+            .right {
+                text-align: center !important;
+            }
+        }
+
+        .right {
+            text-align: right;
+
+        }
+    }
+
+    .slider {
+        display: flex;
+        overflow-x: scroll;
+        align-items: stretch;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 25px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        a.item {
+            box-shadow: 5px 5px 19px 4px rgb(2 18 34 / 11%);
+            display: block;
+            width: 320px;
+            margin: 0 15px;
+            flex-shrink: 0;
+
+            &:hover {
+                .content {
+                    .btn {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .image {
+                margin-bottom: 15px;
+            }
+
+            .content {
+                padding: 0 25px;
+
+                .title {
+                    color: $black2;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    font-weight: 200;
+                }
+
+                .desc {
+                    color: $desc7;
+                    font-size: 13px;
+                    line-height: 2;
+                    margin-bottom: 10px;
+
+                    @media screen and (max-width:991px) {
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        width: 100%;
+                    }
+                }
+
+                .btn {
+                    margin-right: auto;
+                    display: table;
+                    opacity: 0;
+                    padding-bottom: 10px;
+                    font-size: 14px;
+                    color: $desc8;
+                    transition: $transition;
+
+                    @media screen and (max-width:991px) {
+                        opacity: 1;
+                    }
+
+                    .icon {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

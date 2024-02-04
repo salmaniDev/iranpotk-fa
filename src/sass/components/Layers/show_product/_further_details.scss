@@ -1,0 +1,41 @@
+.further_details {
+
+    @media screen and (max-width:767px) {
+        .title {
+            font-size: 18px !important;
+            margin-bottom: 10px !important;
+        }
+
+        .subtitle {
+            margin-bottom: 19px !important;
+            font-size: 15px !important;
+            line-height: 2;
+        }
+
+        .desc {
+            font-size: 14px !important;
+            margin-bottom: 40px !important;
+        }
+    }
+
+    .title {
+        color: $red3;
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .subtitle {
+        color: $desc4;
+        font-weight: 200;
+        margin-bottom: 30px;
+    }
+
+    .desc {
+        color: $desc8;
+        margin-bottom: 60px;
+        line-height: 2.3;
+        font-size: 15px;
+    }
+
+    .image {}
+}

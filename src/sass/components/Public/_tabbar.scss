@@ -1,0 +1,111 @@
+.tabbar {
+    margin-top: -54px;
+    border-bottom: 3px solid #E4E4E4;
+    position: sticky;
+    top: 212px;
+    transition: $transition;
+    background-color: $bg2; 
+    z-index: 1;
+    padding-top: 15px;
+
+    &.active {
+        top: 147px;
+    }
+
+
+    @media screen and (max-width:991px) {
+        padding: 6px 0 !important;
+        top: 245px;
+
+        &.active {
+            top: 190px !important;
+        }
+
+        .box {
+
+            li {
+                margin-left: 20px !important;
+            }
+        }
+
+        #tabButton {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:767px) {
+        top: 237px !important;
+
+        &.active {
+            top: 182px !important;
+        }
+    }
+
+    @media screen and (max-width:575px) {
+        top: 221px !important;
+
+        &.active {
+            top: 165px !important;
+        }
+    }
+
+    @media screen and (max-width:440px) {
+        .col-md-12 {
+            position: relative;
+
+            &::after {
+                content: "";
+                background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgb(255 255 255 / 0%) 0%, #ededed 100%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 60px;
+                z-index: 1;
+            }
+        }
+    }
+
+    .box {
+        display: flex;
+        justify-content: start;
+        overflow-x: scroll;
+        white-space: nowrap;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            flex-shrink: 0;
+            margin-left: 65px;
+            cursor: pointer;
+            font-size: 13px;
+            color: $desc8;
+            padding: 15px 0;
+            transition: $transition;
+            position: relative;
+            z-index: 1;
+            padding-bottom: 8px;
+            &:hover {
+                color: $red;
+            }
+
+            &.active {
+                color: $red;
+            }
+        }
+    }
+
+    #tabButton {
+        background-image: url("../dist/images/tab.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        position: absolute;
+        bottom: -11px;
+        width: 280px;
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+    }
+}

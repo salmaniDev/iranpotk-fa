@@ -1,0 +1,35 @@
+{
+  "name": "iran-potk",
+  "version": "1.0.0",
+  "description": "iran-potk",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "start": "webpack serve",
+    "watch": "webpack --watch",
+    "build": "NODE_ENV=production webpack",
+    "build-dev": "webpack"
+  },
+  "author": "mohammad salmani",
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "mini-css-extract-plugin": "^1.3.3",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.5",
+    "browserslist": "^4.21.2",
+    "skeleton-screen-css": "^1.1.0",
+    "url-loader": "^4.1.1"
+  }
+}

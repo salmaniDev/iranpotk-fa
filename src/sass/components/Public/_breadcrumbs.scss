@@ -1,0 +1,58 @@
+.breadcrumbs {
+    margin-top: 132px;
+    padding: 20px 0;
+    background-color: $bg2;
+
+    @media screen and (max-width:991px) {
+        margin-top: 166px;
+        padding: 15px 0;
+    }
+
+    @media screen and (max-width:767px) {
+        .box {
+            overflow: scroll;
+            white-space: nowrap;
+            display: flex;
+            justify-content: start;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            li {
+                flex-shrink: 0;
+                font-size: 12px !important;
+                margin-left: 15px !important;
+
+                a {
+                    .icon {
+                        margin-right: 8px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .box {
+        li {
+            display: inline-block;
+            color: $black;
+            font-size: 12px;
+            margin-left: 23px;
+
+            a {
+                color: $desc8;
+                transition: $transition;
+
+                &:hover {
+                    color: $red;
+                }
+
+                .icon {
+                    margin-right: 15px;
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+}
