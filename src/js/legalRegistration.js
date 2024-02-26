@@ -185,7 +185,7 @@ if (formCard) {
                 return data.every(elem => elem.error == '')
             }
 
-            if (!errorValidation(inputsData)) {
+            if (!errorValidation(inputsData)) { 
                 e.preventDefault()
             } else {
                 return true
