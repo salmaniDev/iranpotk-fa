@@ -1,6 +1,5 @@
 const formCard = document.querySelector('.legalRegistration .formBox .row')
 if (formCard) {
-    // mamad
     let inputsData = [
         {
             label: "نام کامل شرکت",
