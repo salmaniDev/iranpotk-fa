@@ -9,7 +9,7 @@
     />
     <link rel="icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./main.css" />
-    <title>لیست نمایندگی ها</title>
+    <title>نمایش نماینده</title>
 
     <style></style>
   </head>
@@ -576,91 +576,124 @@
         </div>
       </div>
     </nav>
-    <div class="breadcrumbs">
+    <div id="stickyBox" class="tabbar agency">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <ul class="box">
-              <li>
-                <a href="#" class="link"
-                  >صفحه اصلی <i class="icon icon-arrow_left"></i
-                ></a>
-              </li>
-              <li>لیست نمایندگان</li>
+              <li data-id="one" class="active">نمایندگی نواب</li>
+              <li data-id="two">نمایندگی تهران</li>
+              <li data-id="three">نمایندگی اصفهان</li>
+              <li data-id="four">نمایندگی شیراز</li>
+              <li data-id="five">نمایندگی کاشان</li>
             </ul>
+            <span id="tabButton"></span>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="blogs agency-list">
+    <section class="show_agency">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <div class="section_head">
-              <h2 class="title">نمایندگان فروش ایران تک در اصفهان</h2>
-              <h4 class="desc">نمایندگان فروش مجاز شرکت ایران پتک</h4>
+          <div class="col-12">
+            <div class="tab_content active" id="one">
+              <div class="content_box">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="main_info">
+                      <h3 class="title">نمایندگی ایران پتک نواب</h3>
+
+                      <div class="box d-flex">
+                        <ul class="key">
+                          <li>نام فروشگاه <span class="dot">:</span></li>
+                          <li>نام صاحب فروشگاه <span class="dot">:</span></li>
+                          <li>شماره ثابت <span class="dot">:</span></li>
+                          <li>شماره همراه <span class="dot">:</span></li>
+                        </ul>
+
+                        <ul class="value">
+                          <li>فروشگاه ایران پتک نواب</li>
+                          <li>محمد رضایی</li>
+                          <li>021-55362573</li>
+                          <li>09109082849</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4"></div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="item">
-              <img src="./img/blogs/1.png" alt="image" class="image" />
-              <div class="content">
-                <span class="data">نمایندگان فروش</span>
-                <h3 class="title">
-                  نمایندگی ایران پتک در بخش مرکزی
-                </h3>
-              </div>
-              <div class="action">
-                <span class="btn"> مشاهده </span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="item">
-              <img src="./img/blogs/1.png" alt="image" class="image" />
-              <div class="content">
-                <span class="data">نمایندگان فروش</span>
-                <h3 class="title">
-                  نمایندگی ایران پتک در بخش مرکزی
-                </h3>
-              </div>
-              <div class="action">
-                <span class="btn"> مشاهده </span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="item">
-              <img src="./img/blogs/1.png" alt="image" class="image" />
-              <div class="content">
-                <span class="data">نمایندگان فروش</span>
-                <h3 class="title">
-                  نمایندگی ایران پتک در بخش مرکزی
-                </h3>
-              </div>
-              <div class="action">
-                <span class="btn"> مشاهده </span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="item">
-              <img src="./img/blogs/1.png" alt="image" class="image" />
-              <div class="content">
-                <span class="data">نمایندگان فروش</span>
-                <h3 class="title">
-                  نمایندگی ایران پتک در بخش مرکزی
-                </h3>
-              </div>
-              <div class="action">
-                <span class="btn"> مشاهده </span>
-              </div>
-            </a>
+            <div class="tab_content" id="two">2</div>
+            <div class="tab_content" id="three">3</div>
+            <div class="tab_content" id="four">4</div>
+            <div class="tab_content" id="five">5</div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="agency_address">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-11">
+            <div class="col-md-7">
+              <div class="main_info">
+                <h3 class="main_title">آدرس نمایندگی</h3>
+                <p class="desc">
+                  آبشار سوم,اشکاوند,بلوار انقلاب,جنب آموزشگاه,رانندگی مهدی
+                </p>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <img src="" alt="" class="main_image" />
+            </div>
+            <div class="col-12">
+              <div class="more_details">
+                <h3 class="main_title">توضیحات تکمیلی</h3>
+                <p class="desc">
+                  متن کوتاه درباره توضیحات تکمیلی نمایندگی. متن کوتاه درباره
+                  توضیحات تکمیلی نمایندگی. متن کوتاه درباره توضیحات تکمیلی
+                  نمایندگی. متن کوتاه درباره توضیحات تکمیلی نمایندگی. متن کوتاه
+                  درباره توضیحات تکمیلی نمایندگی. متن کوتاه درباره توضیحات
+                  تکمیلی نمایندگی. متن کوتاه درباره توضیحات تکمیلی نمایندگی. متن
+                  کوتاه درباره توضیحات تکمیلی نمایندگی. متن کوتاه درباره توضیحات
+                  تکمیلی نمایندگی.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
     <footer class="d-lg-block d-none">
       <div class="container">

@@ -1,0 +1,21 @@
+.agency_address {
+  .main_info {
+    .desc {
+      color: #555967;
+      font-size: 17px;
+    }
+  }
+  .more_details {
+    margin-top: 55px;
+    .desc {
+      font-size: 18px;
+      color: #858585;
+    }
+  }
+
+  .main_title {
+    margin-bottom: 25px;
+    color: $red3;
+    font-size: 20px;
+  }
+}
