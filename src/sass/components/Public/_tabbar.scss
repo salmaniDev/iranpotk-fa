@@ -13,16 +13,26 @@
   }
 
   &.agency {
-    top: 133px;
+    top: 131px;
 
     &.active {
-      top: 68px;
+      top: 66px;
     }
+
+
   }
 
   @media screen and (max-width: 991px) {
     padding: 6px 0 !important;
     top: 245px;
+
+    &.agency {
+      top: 165px !important;
+
+      &.active {
+        top: 110px !important;
+      }
+    }
 
     &.active {
       top: 190px !important;
@@ -61,12 +71,10 @@
 
       &::after {
         content: "";
-        background: linear-gradient(
-          270deg,
-          rgba(255, 255, 255, 0) 0%,
-          rgb(255 255 255 / 0%) 0%,
-          #ededed 100%
-        );
+        background: linear-gradient(270deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgb(255 255 255 / 0%) 0%,
+            #ededed 100%);
         position: absolute;
         top: 0;
         left: 0;
@@ -98,6 +106,7 @@
       position: relative;
       z-index: 1;
       padding-bottom: 8px;
+
       &:hover {
         color: $red;
       }
