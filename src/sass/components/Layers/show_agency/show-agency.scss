@@ -51,7 +51,7 @@
         top: 100px;
 
         .actions {
-          margin-left: 20px;
+          margin-left: 25px;
           overflow-y: auto;
           max-height: 330px;
           direction: ltr;
@@ -78,6 +78,19 @@
             margin-top: 20px;
           }
 
+          li {
+            position: relative;
+
+            .icon {
+              position: absolute;
+              right: 50%;
+              bottom: 50%;
+              transform: translate(50%, 50%);
+              color: #fff;
+              font-size: 30px;
+            }
+          }
+
           img {
             width: 80px;
             height: 80px;
@@ -95,6 +108,8 @@
   }
 
   @media screen and (max-width:991px) {
+    margin-top: 260px;
+
     .tab_content {
       .content_box {
         flex-direction: column;
@@ -136,7 +151,7 @@
   }
 
   @media screen and (max-width:767px) {
-    margin-top: 260px;
+    margin-bottom: 90px;
 
     .tab_content {
       .content_box {
@@ -149,6 +164,7 @@
           .box {
             ul {
               li {
+                margin-right: 10px !important;
                 font-size: 15px;
                 margin-bottom: 25px;
               }

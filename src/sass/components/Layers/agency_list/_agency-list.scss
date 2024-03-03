@@ -1,35 +1,23 @@
 .agency-list {
   margin-top: 45px;
 
+  .section_head {
+    .title {
+      font-size: 22px;
+    }
+  }
+
   .item {
     margin-inline: 0 !important;
     width: 100% !important;
     margin-bottom: 35px !important;
 
-    // &:nth-child() {
-    //   background-color: $red3;
-
-    //   .content {
-    //     .title {
-    //       color: #fff;
-    //     }
-    //   }
-
-    //   .action {
-    //     .btn {
-    //       color: #fff;
-
-    //       &::after {
-    //         border-color: #fff;
-    //       }
-    //     }
-    //   }
-    // }
-
     .content {
       .title {
         position: relative;
         font-size: 16px;
+        margin-bottom: 90px;
+
         &::after {
           content: "";
           height: 30px;
@@ -47,6 +35,17 @@
         font-weight: 200;
         font-size: 12px;
         top: -32px;
+      }
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    .item {
+      .content {
+        .title {
+          margin-top: 15px;
+          margin-bottom: 70px !important;
+        }
       }
     }
   }
