@@ -1,0 +1,112 @@
+.agency_index {
+    margin-bottom: 100px;
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: $red3;
+            z-index: -1;
+            width: 120%;
+            right: 50%;
+            top: 118px;
+            transform: translateX(50%);
+            height: 65%;
+        }
+
+        .main_info {
+            flex: 1;
+            margin-top: 50px;
+            color: #fff;
+
+            .title {
+                font-size: 19px;
+                margin-bottom: 15px;
+            }
+
+            .link {}
+
+            .desc {
+                font-size: 15px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                line-height: 48px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .map {
+            text-align: center;
+            flex: 1;
+
+            svg {
+                path {
+                    cursor: pointer;
+                    transition: $transition;
+
+                    &:hover {
+                        fill: $red3;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1199px) {
+        .box {
+            &::after {
+                top: 99px;
+                width: 110%;
+                height: 68%;
+            }
+        }
+    }
+
+    @media screen and (max-width:1199px) {
+        .box {
+            &::after {
+                all: unset;
+            }
+
+            .main_info {
+                .title {
+                    font-size: 20px;
+                    color: #B20217;
+                }
+
+                .desc {
+                    color: #A3A3A3;
+                }
+            }
+
+            .map {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width:767px) {
+        .main_info {
+            text-align: center;
+
+            .title {
+                font-size: 17px;
+                margin-bottom: 10px;
+            }
+
+            .desc {
+                font-size: 14px;
+                line-height: 38px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
