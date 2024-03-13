@@ -19,7 +19,34 @@
       top: 66px;
     }
 
+    .card {
+      display: flex;
+      align-items: center;
 
+      .box {
+        flex: 1;
+      }
+
+      > .icon {
+        background-color: #ea2732;
+        color: #fff;
+        padding: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        position: relative;
+
+        .tooltip {
+          padding-bottom: 8px;
+        }
+
+        &:hover {
+          .tooltip {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 991px) {
@@ -71,10 +98,12 @@
 
       &::after {
         content: "";
-        background: linear-gradient(270deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgb(255 255 255 / 0%) 0%,
-            #ededed 100%);
+        background: linear-gradient(
+          270deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgb(255 255 255 / 0%) 0%,
+          #ededed 100%
+        );
         position: absolute;
         top: 0;
         left: 0;
