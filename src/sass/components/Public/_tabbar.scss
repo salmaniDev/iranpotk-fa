@@ -37,6 +37,12 @@
 
         .tooltip {
           padding-bottom: 8px;
+          font-family: dana5;
+          font-weight: 100;
+
+          &::after {
+            z-index: -1;
+          }
         }
 
         &:hover {
