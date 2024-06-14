@@ -1,6 +1,6 @@
 .agency_address {
   margin-top: 80px;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   padding-block: 60px;
 
   .main_info {
@@ -11,9 +11,15 @@
     }
   }
 
-  .main_image {
-    width: 100%;
-    object-fit: cover;
+  .map {
+    height: 300px;
+    border-radius: 30px;
+
+    iframe {
+      height: 100%;
+      width: 100%;
+      border-radius: 25px;
+    }
   }
 
   .more_details {
@@ -32,7 +38,7 @@
     font-size: 20px;
   }
 
-  @media screen and (max-width:991px) {
+  @media screen and (max-width: 991px) {
     padding-top: 45px;
 
     .main_info {
@@ -49,7 +55,7 @@
     }
   }
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     margin-top: 55px;
     padding-block: 35px;
 

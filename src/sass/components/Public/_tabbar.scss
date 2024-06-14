@@ -27,30 +27,10 @@
         flex: 1;
       }
 
-      > .icon {
-        background-color: #ea2732;
-        color: #fff;
-        padding: 6px;
+      .alert {
+        margin-left: 80px;
         font-size: 14px;
-        cursor: pointer;
-        position: relative;
-
-        .tooltip {
-          padding-bottom: 8px;
-          font-family: dana5;
-          font-weight: 100;
-
-          &::after {
-            z-index: -1;
-          }
-        }
-
-        &:hover {
-          .tooltip {
-            visibility: visible;
-            opacity: 1;
-          }
-        }
+        color: $red3;
       }
     }
   }
@@ -64,6 +44,17 @@
 
       &.active {
         top: 110px !important;
+      }
+
+      .card {
+        display: block;
+        padding-top: 15px;
+        .alert {
+          margin-left: 0;
+          text-align: center;
+          font-weight: 200;
+          margin-bottom: 5px;
+        }
       }
     }
 

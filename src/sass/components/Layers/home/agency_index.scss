@@ -49,12 +49,6 @@
 
             svg {
                 path {
-                    cursor: pointer;
-                    transition: $transition;
-
-                    &:hover {
-                        fill: $red3;
-                    }
                 }
             }
         }

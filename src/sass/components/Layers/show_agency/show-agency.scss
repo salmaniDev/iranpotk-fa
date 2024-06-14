@@ -11,7 +11,7 @@
       .main_info {
         flex: 1;
 
-        >.title {
+        > .title {
           color: $red3;
           margin-bottom: 55px;
           font-size: 22px;
@@ -20,7 +20,6 @@
         .box {
           .key {
             li {
-
               .dot {
                 margin-right: 15px;
               }
@@ -44,7 +43,8 @@
       }
 
       .image_box {
-        display: flex;
+        // display: flex;
+        display: none;
         flex: 1;
         justify-content: end;
         position: sticky;
@@ -74,7 +74,7 @@
             transform: translateX(10px);
           }
 
-          li+li {
+          li + li {
             margin-top: 20px;
           }
 
@@ -98,7 +98,7 @@
           }
         }
 
-        >img {
+        > img {
           width: 420px;
           height: 335px;
           object-fit: cover;
@@ -107,7 +107,7 @@
     }
   }
 
-  @media screen and (max-width:991px) {
+  @media screen and (max-width: 991px) {
     margin-top: 260px;
 
     .tab_content {
@@ -115,7 +115,7 @@
         flex-direction: column;
 
         .main_info {
-          >.title {
+          > .title {
             text-align: center;
           }
 
@@ -141,7 +141,7 @@
             }
           }
 
-          >img {
+          > img {
             max-width: 100%;
             margin-bottom: 15px;
           }
@@ -150,13 +150,13 @@
     }
   }
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 90px;
 
     .tab_content {
       .content_box {
         .main_info {
-          >.title {
+          > .title {
             font-size: 19px;
             margin-bottom: 35px;
           }
@@ -170,8 +170,6 @@
               }
             }
           }
-
-
         }
 
         .image_box {
@@ -184,7 +182,7 @@
             }
           }
 
-          >img {
+          > img {
             height: 230px;
             width: auto;
           }
