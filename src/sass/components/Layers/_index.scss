@@ -14,3 +14,77 @@
 @import "./legalRegistration/legalRegistration.scss";
 @import "./agency_list/index";
 @import "./show_agency/index.scss";
+
+.hero .action {
+  position: absolute;
+  bottom: 25px;
+  width: 300px;
+  right: 30px;
+  left: auto;
+  display: flex;
+  justify-content: right;
+  transform: none;
+}
+.hero .action .icon {
+  margin-left: 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: auto;
+  right: auto;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .dashboard .dashboard_tabs .item.user_tabs .box {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: auto;
+  }
+  .dashboard .dashboard_tabs .item.user_tabs .box li {
+    flex-shrink: 0;
+    padding: 22px 11px;
+    margin: 0;
+  }
+  .dashboard .dashboard_tabs .item.user_tabs {
+    padding: 0 !important;
+  }
+}
+.dashboard .dashboard_tabs .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard .dashboard_tabs .item.user_info .action {
+  color: #ee1e23;
+  font-size: 19px;
+}
+#work_experience input {
+  width: 100%;
+  color: #000;
+  font-family: "dana5";
+  font-weight: 100;
+  font-size: 14px;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+  padding: 13px 10px;
+  background-color: #f7f7f7 !important;
+}
+#workPlus {
+  margin: 10px 50px;
+  font-size: 25px;
+  cursor: pointer;
+}
