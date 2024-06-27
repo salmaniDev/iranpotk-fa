@@ -62,7 +62,7 @@
   .dashboard .dashboard_tabs .item.user_tabs {
     padding: 0 !important;
   }
-}
+}          
 .dashboard .dashboard_tabs .item {
   display: flex;
   align-items: center;
@@ -87,4 +87,12 @@
   margin: 10px 50px;
   font-size: 25px;
   cursor: pointer;
+}
+
+.dashboard .dashboard_items #filter-box .box .TableOrder thead {
+  top: 0 !important;
+}
+
+.dashboard .dashboard_items #filter-box .box .TableOrder thead.active {
+  top: 0 !important;
 }

@@ -44,13 +44,13 @@ img {
   outline: none !important;
 }
 
-input[type=search]::-ms-clear {
+input[type="search"]::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type=search]::-ms-reveal {
+input[type="search"]::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
@@ -117,7 +117,7 @@ label {
 .submit {
   border: unset;
   width: 100%;
-  font-family: 'dana5';
+  font-family: "dana5";
   font-weight: 100;
   cursor: pointer;
   font-size: 14px;
@@ -144,7 +144,7 @@ label {
     font-weight: 100;
     font-size: 14px;
     border: 2px solid #fff;
-    transition: all .3s;
+    transition: all 0.3s;
     padding: 13px 10px;
     /* border-radius: 10px; */
 
@@ -205,9 +205,8 @@ label {
   }
 }
 
-
 .overlay {
-  background: rgba(0, 0, 0, .55);
+  background: rgba(0, 0, 0, 0.55);
   position: fixed;
   left: 0;
   top: 0;
@@ -243,7 +242,7 @@ label {
 }
 
 .btn_dark_v2 {
-  color: #19BFD3;
+  color: #19bfd3;
   transition: $transition;
   font-size: 13px;
 
@@ -256,7 +255,6 @@ label {
   .icon {
     transition: $transition;
   }
-
 }
 
 .underline {
@@ -271,13 +269,13 @@ label {
   text-align: center;
   margin-bottom: 50px;
 
-  @media screen and (max-width:1023px) {
+  @media screen and (max-width: 1023px) {
     .title {
       font-size: 18px !important;
     }
   }
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 35px;
 
     .title {
@@ -356,7 +354,7 @@ label {
   margin-top: 70px;
   display: none;
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     margin-top: 40px;
   }
 
@@ -372,11 +370,11 @@ label {
   padding: 20px 15px;
   transition: $transition;
 
-  @media only screen and (max-width:991px) {
+  @media only screen and (max-width: 991px) {
     margin-bottom: 2rem;
   }
 
-  >.title {
+  > .title {
     color: $red;
     font-size: 18px;
     margin-bottom: 20px;
@@ -385,7 +383,6 @@ label {
   }
 
   .input_box {
-
     input,
     textarea,
     select {
@@ -418,9 +415,9 @@ label {
   margin-top: 15px;
   align-items: center;
 
-  @media screen and (max-width:575px) {
+  @media screen and (max-width: 575px) {
     li {
-      margin: 0 .2rem !important;
+      margin: 0 0.2rem !important;
 
       &:first-child,
       &:last-child {
@@ -447,7 +444,7 @@ label {
       .link {
         width: 75px;
         height: 45px;
-        line-height: .5;
+        line-height: 0.5;
         margin-top: 4px;
         display: flex;
         align-items: center;
@@ -470,7 +467,7 @@ label {
       -o-border-image: initial;
       border-image: initial;
       /* border-radius: 50%; */
-      transition: all .3s;
+      transition: all 0.3s;
       background-color: #fafafa;
 
       &:hover {
@@ -572,7 +569,7 @@ label {
 }
 
 .slide_action {
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     top: 83px;
 
     .icon {
@@ -606,7 +603,7 @@ label {
     }
   }
 
-  @media screen and (max-width:575px) {
+  @media screen and (max-width: 575px) {
     width: 85%;
   }
 }
@@ -628,7 +625,7 @@ label {
     text-wrap: nowrap;
     transition: $transition;
 
-    @media screen and (max-width:575px) {
+    @media screen and (max-width: 575px) {
       font-size: 13px;
       margin: 0 13px;
     }
@@ -647,7 +644,7 @@ label {
     background-color: $red;
     position: absolute;
     bottom: -20px;
-    transition: all .6s;
+    transition: all 0.6s;
   }
 }
 
@@ -662,7 +659,7 @@ label {
   z-index: 10;
   transition: $transition;
 
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     top: 165px;
 
     &.active {
@@ -670,7 +667,7 @@ label {
     }
   }
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     justify-content: start !important;
     padding: 0 !important;
     white-space: nowrap;
@@ -732,12 +729,12 @@ label {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     &.product {
       .content {
         width: 95% !important;
@@ -782,9 +779,15 @@ label {
         }
       }
     }
+
+    .content {
+      width: 90%;
+      overflow: auto;
+      height: 75%;
+    }
   }
 
-  @media screen and (max-width:575px) {
+  @media screen and (max-width: 575px) {
     &.shareProduct {
       .content {
         width: 93% !important;
@@ -932,7 +935,7 @@ label {
               }
 
               &.icon-whatsapp {
-                color: #25D366;
+                color: #25d366;
                 font-size: 21px;
               }
 
@@ -943,7 +946,7 @@ label {
               &:hover {
                 color: #fff;
 
-                ~.tooltip {
+                ~ .tooltip {
                   opacity: 1;
                   visibility: visible;
                 }
@@ -953,7 +956,7 @@ label {
                 }
 
                 &.icon-whatsapp {
-                  background-color: #25D366;
+                  background-color: #25d366;
                 }
 
                 &.icon-share {
@@ -961,7 +964,6 @@ label {
                 }
               }
             }
-
           }
         }
       }
@@ -979,7 +981,6 @@ label {
       font-weight: 200;
       opacity: 0;
       transition: opacity 1s;
-
 
       &.active {
         opacity: 1;
@@ -1021,6 +1022,7 @@ label {
 
     &::-webkit-scrollbar {
       width: 4px;
+      height: 4px;
       direction: rtl;
       text-align: right;
     }
@@ -1053,7 +1055,7 @@ label {
     position: absolute;
     left: 30px;
     top: 30px;
-    color: #EE1D23;
+    color: #ee1d23;
     font-size: 18px;
 
     .icon {
@@ -1062,7 +1064,7 @@ label {
     }
   }
 
-  @media screen and (max-width:424px) {
+  @media screen and (max-width: 424px) {
     .box {
       padding: 15px !important;
 
@@ -1170,8 +1172,6 @@ label {
           background-color: $red2;
         }
       }
-
-
     }
   }
 }
@@ -1220,7 +1220,7 @@ label {
     }
 
     .link {
-      background-color: #B20217;
+      background-color: #b20217;
       font-size: 16px;
       padding: 10px 20px;
     }
@@ -1261,7 +1261,7 @@ label {
   margin-bottom: 25px;
   text-align: center;
 
-  @media screen and (max-width:575px) {
+  @media screen and (max-width: 575px) {
     font-size: 14px;
     line-height: 2;
   }
