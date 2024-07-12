@@ -70,15 +70,19 @@
   }
 
   @media screen and (max-width: 991px) {
-    margin-bottom: 130px;
-  }
+    @media screen and (max-width: 991px) {
+      margin-bottom: 130px;
+    }
 
-  @media screen and (max-width: 767px) {
-    .item {
-      .content {
-        .title {
-          margin-top: 15px;
-          margin-bottom: 70px !important;
+    @media screen and (max-width: 767px) {
+      @media screen and (max-width: 767px) {
+        .item {
+          .content {
+            .title {
+              margin-top: 15px;
+              margin-bottom: 70px !important;
+            }
+          }
         }
       }
     }
