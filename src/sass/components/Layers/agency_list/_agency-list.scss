@@ -7,11 +7,24 @@
     }
   }
 
-  
+  #agencyItems {
+    min-height: 465px;
+  }
+
   .item {
     margin-inline: 0 !important;
     width: 100% !important;
     margin-bottom: 35px !important;
+
+    &#agencyItems {
+      .content::before {
+        display: none !important;
+      }
+    }
+
+    .image {
+      padding: 0px !important;
+    }
 
     .content {
       .title {
@@ -37,14 +50,30 @@
         font-size: 12px;
         top: -32px;
       }
+
+      ul {
+        margin-top: -80px;
+
+        li {
+          list-style: circle;
+          margin-right: 25px;
+          line-height: 2;
+          font-size: 14px;
+
+          span {
+            font-weight: bold;
+            font-size: 13px;
+          }
+        }
+      }
     }
   }
 
-  @media screen and (max-width:991px) {
+  @media screen and (max-width: 991px) {
     margin-bottom: 130px;
   }
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     .item {
       .content {
         .title {
