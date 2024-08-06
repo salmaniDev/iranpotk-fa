@@ -193,7 +193,7 @@
                     left: auto;
                     font-size: 16px;
                     cursor: pointer;
-                    color: $desc2;
+                    color: $desc12;
                 }
             }
         }
@@ -206,7 +206,7 @@
 
             .cart {
                 font-size: 20px;
-                color: $desc;
+                color: $desc11;
                 position: relative;
 
                 .number {
@@ -236,14 +236,14 @@
                     display: block;
 
                     span {
-                        color: $desc2;
+                        color: $desc11;
                         font-size: 14px;
-                        font-weight: 100;
+                        font-weight: 300;
                     }
                 }
 
                 .desc {
-                    color: $desc2;
+                    color: $desc11;
                     font-size: 12px;
                 }
             }
@@ -303,7 +303,7 @@
             align-items: center;
 
             .link {
-                color: $desc;
+                color: $desc11;
                 border: 1px solid $desc;
                 padding: 5px 7px;
                 font-size: 14px;
