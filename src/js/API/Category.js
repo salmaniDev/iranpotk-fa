@@ -100,6 +100,7 @@ export async function RenderProductInfo(data, Target) {
 
         let product_image = document.createElement('img')
         product_image.classList.add('product_image')
+        product_image.setAttribute("alt",element.title);
 
         let ProductTitle = document.createElement('h4')
         ProductTitle.innerHTML = element.title
