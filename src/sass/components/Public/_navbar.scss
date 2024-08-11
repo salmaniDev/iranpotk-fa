@@ -30,6 +30,10 @@
                     }
                 }
 
+                .heading-title {
+                    display: none;
+                }
+
                 .input_box {
                     input {
                         padding: 11px 10px;
@@ -162,6 +166,20 @@
 
             .logo {
                 margin-left: 30px;
+            }
+            
+            .heading-title {
+                font-size: 17px;
+                margin-right: -30px;
+                width: 120px;
+                text-align: center;
+
+                span {
+                    font-size: 9px;
+                    display: block;
+                    color: #ed1d23;
+                    margin-top: 3px;
+                }
             }
 
             .input_box {
