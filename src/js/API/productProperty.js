@@ -1,5 +1,5 @@
 import { Fetch, SetEmpty, dLoading, digits, isSet, loading, removeDuplicates } from "../Utils"
-let Lang = document.getElementsByTagName('lang')[0].innerText
+let Lang = document.documentElement.lang
 window.addEventListener('load', async () => {
     if (isSet(document.getElementById('card_table'))) {
 

@@ -1,5 +1,6 @@
 import { Fetch, dLoading, loading } from "./Utils";
-let Lang = document.getElementsByTagName('lang')[0].innerText
+let Lang = document.documentElement.lang
+
 window.addEventListener('load', async () => {
     const navbar = window.iranPotkVar.navbar;
     const burgger = window.iranPotkVar.burgger;
@@ -28,7 +29,11 @@ window.addEventListener('load', async () => {
     })
 
     let loadnavbarMenuList = loading(navbarMenuList, 'S', '#E91924', '#fff')
-    let mainMenu = await Fetch('GET', 'action=load_subject', false, false, false)
+    let mainMenu
+    if(Lang == 'en')
+        mainMenu = await Fetch('GET', 'action=load_subject_en', false, false, false)
+    else
+        mainMenu = await Fetch('GET', 'action=load_subject', false, false, false)
     // let productLink = document.createElement('a')
     // productLink.classList.add('product-link')
 

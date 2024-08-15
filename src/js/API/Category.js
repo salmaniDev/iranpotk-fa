@@ -1,5 +1,5 @@
 import { Fetch, ImageChekerLoad, Tab, dLoading, isSet, loading } from "../Utils"
-let Lang = document.getElementsByTagName('lang')[0].innerText
+let Lang = document.documentElement.lang
 window.addEventListener('load', async () => {
     if (isSet(document.getElementById('grouping_Product'))) {
         let container = document.getElementById('grouping_Product')
@@ -43,6 +43,7 @@ export async function RenderInfoCategory(id) {
     container.innerHTML = ''
     let load = loading(container, 'S', '#E91924', '#fff')
 
+    let info
     if(Lang == 'en')
         info = await Fetch('GET', 'action=load_subject_product_index_en&s_id=' + id, false, false, false)
     else
