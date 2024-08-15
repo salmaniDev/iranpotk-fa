@@ -139,6 +139,8 @@ function RenderHead(Data, Lang, Body, Filter, target) {
             if (Picturestatus) {
                 tr.append(item)
             }
+        } else if (Lang == 'en' && (element[Lang + '_title'] == 'Price' || element[Lang + '_title'] == 'Buy')) {
+            // tr.append(item)
         } else {
             tr.append(item)
         }
@@ -315,7 +317,10 @@ function RenderBody(Data, Lang) {
                 if (Picturestatus) {
                     tr.append(td)
                 }
-            } else {
+            } else if (Lang == 'en' && (Data.header[index][Lang + '_title'] == 'Price' || Data.header[index][Lang + '_title'] == 'Buy')) {
+                // tr.append(td)
+            }
+            else {
                 tr.append(td)
             }
 
