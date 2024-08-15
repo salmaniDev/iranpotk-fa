@@ -1,12 +1,15 @@
 import { Fetch, ImageChekerLoad, Tab, dLoading, isSet, loading } from "../Utils"
-
+let Lang = document.getElementsByTagName('lang')[0].innerText
 window.addEventListener('load', async () => {
     if (isSet(document.getElementById('grouping_Product'))) {
         let container = document.getElementById('grouping_Product')
         let load = loading(container, 'S', '#E91924', '#fff')
 
-
-        let category = await Fetch('GET', 'action=load_subject_index', false, false, false)
+        let category
+        if(Lang == 'en')
+            category = await Fetch('GET', 'action=load_subject_index_en', false, false, false)
+        else
+            category = await Fetch('GET', 'action=load_subject_index', false, false, false)
 
         category.category.forEach((element, index) => {
             let item = document.createElement('span')
@@ -40,7 +43,10 @@ export async function RenderInfoCategory(id) {
     container.innerHTML = ''
     let load = loading(container, 'S', '#E91924', '#fff')
 
-    let info = await Fetch('GET', 'action=load_subject_product_index&s_id=' + id, false, false, false)
+    if(Lang == 'en')
+        info = await Fetch('GET', 'action=load_subject_product_index_en&s_id=' + id, false, false, false)
+    else
+        info = await Fetch('GET', 'action=load_subject_product_index&s_id=' + id, false, false, false)
     RenderHeaderInfo(info, container)
     RenderProductInfo(info, container)
 
@@ -124,12 +130,18 @@ export async function RenderProductInfo(data, Target) {
     });
 
     let link = document.createElement('a')
-    link.innerHTML = 'مشاهده همه'
+    if(Lang == 'en')
+        link.innerHTML = 'View ALL'
+    else
+        link.innerHTML = 'مشاهده همه'
     link.href = data.permalink
     link.classList.add('btn_dark', 'link')
 
     let IconLink = document.createElement('i')
-    IconLink.classList.add('icon', 'icon-arrowL')
+    if(Lang == 'en')
+        IconLink.classList.add('icon', 'icon-arrowR')
+    else
+        IconLink.classList.add('icon', 'icon-arrowL')
 
     link.append(IconLink)
 

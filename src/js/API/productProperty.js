@@ -1,5 +1,5 @@
 import { Fetch, SetEmpty, dLoading, digits, isSet, loading, removeDuplicates } from "../Utils"
-
+let Lang = document.getElementsByTagName('lang')[0].innerText
 window.addEventListener('load', async () => {
     if (isSet(document.getElementById('card_table'))) {
 
@@ -8,7 +8,6 @@ window.addEventListener('load', async () => {
         Table.innerHTML = ''
 
         let load = loading(Table, 'S', '#E91924', '#fff')
-        let Lang = 'fa'
 
         if (isSet(document.getElementsByTagName('lang')) && document.getElementsByTagName('lang').length != 0) {
             Lang = document.getElementsByTagName('lang')[0].innerText
@@ -18,7 +17,11 @@ window.addEventListener('load', async () => {
         let container = document.createElement('table')
         container.classList.add('table')
 
-        let TableJson = await Fetch('GET', 'action=load_product_feature2&pid=' + pid, false, false, false)
+        let TableJson
+        if(Lang == 'en')
+            TableJson = await Fetch('GET', 'action=load_product_feature2_en&pid=' + pid, false, false, false)
+        else
+            TableJson = await Fetch('GET', 'action=load_product_feature2&pid=' + pid, false, false, false)
 
         let Body = RenderBody(TableJson, Lang)
         let Head = RenderHead(TableJson, Lang, Body, Filter, container)
@@ -62,7 +65,10 @@ function RenderHead(Data, Lang, Body, Filter, target) {
             item.classList.add('filter')
 
             let filterValue = document.createElement('span')
-            filterValue.innerHTML = 'همه'
+            if(Lang == 'en')
+                filterValue.innerHTML = 'ALL'
+            else
+                filterValue.innerHTML = 'همه'
             filterValue.classList.add('Value')
 
             let icon = document.createElement('i')
@@ -73,7 +79,10 @@ function RenderHead(Data, Lang, Body, Filter, target) {
             FilterBox.classList.add('sub_menu')
 
             let all = document.createElement('li')
-            all.innerHTML = 'همه'
+            if(Lang == 'en')
+                all.innerHTML = 'ALL'
+            else
+                all.innerHTML = 'همه'
             all.classList.add('value', 'active')
             all.addEventListener('click', () => {
 
@@ -84,7 +93,10 @@ function RenderHead(Data, Lang, Body, Filter, target) {
                     }
                 });
 
-                Body = FilterTable(FilterBox, filterValue, 'همه', all, Data, Lang, Body, Filter, target)
+                if(Lang == 'en')
+                    Body = FilterTable(FilterBox, filterValue, 'ALL', all, Data, Lang, Body, Filter, target)
+                else
+                    Body = FilterTable(FilterBox, filterValue, 'همه', all, Data, Lang, Body, Filter, target)
             })
 
             FilterBox.append(all)
@@ -201,65 +213,68 @@ function RenderBody(Data, Lang) {
                     td.innerHTML = digits(value);
                     break;
                 case 'Buy':
-                    if (value > 0) {
-                        let pid = document.getElementsByTagName('pid')[0].innerText
-                        td.innerHTML = ''
+                    if(Lang == 'fa')
+                    {
+                        if (value > 0) {
+                            let pid = document.getElementsByTagName('pid')[0].innerText
+                            td.innerHTML = ''
 
-                        if (pid == 530 && isSet(pid)) {
-                            const descBtn = document.createElement('button');
-                            descBtn.setAttribute('class', 'submit purch');
-                            descBtn.innerHTML = "خرید";
-                            descBtn.addEventListener('click', () => {
-                                descModal('جهت تهیه ی این اقلام لطفا با بخش فروش ابزارآلات مارک زنی به شماره ی <span>08634132309</span> تماس حاصل فرمایید.')
-                            })
+                            if (pid == 530 && isSet(pid)) {
+                                const descBtn = document.createElement('button');
+                                descBtn.setAttribute('class', 'submit purch');
+                                descBtn.innerHTML = "خرید";
+                                descBtn.addEventListener('click', () => {
+                                    descModal('جهت تهیه ی این اقلام لطفا با بخش فروش ابزارآلات مارک زنی به شماره ی <span>08634132309</span> تماس حاصل فرمایید.')
+                                })
 
-                            td.append(descBtn)
-                        } else {
-                            let form = `
-                            <form action="${window._env_.SiteUrl}/form_order.php" method="post">
-                                <input name="product_id" value="${pid}" type="hidden">
-                                <input name="set_cart" value="1" type="hidden">
-                                <input type="hidden" name="qty1" value="1">  
-                                <input type="hidden" name="feature_value" value="${value}">
-                                <button class="submit purch" name="submit" type="submit" >خرید</button>                            
-                            </form>
-                        `;
+                                td.append(descBtn)
+                            } else {
+                                let form = `
+                                <form action="${window._env_.SiteUrl}/form_order.php" method="post">
+                                    <input name="product_id" value="${pid}" type="hidden">
+                                    <input name="set_cart" value="1" type="hidden">
+                                    <input type="hidden" name="qty1" value="1">  
+                                    <input type="hidden" name="feature_value" value="${value}">
+                                    <button class="submit purch" name="submit" type="submit" >خرید</button>                            
+                                </form>
+                            `;
 
-                            td.insertAdjacentHTML('beforeend', form)
+                                td.insertAdjacentHTML('beforeend', form)
+                            }
+
                         }
+                        else if (value == -1) {
+                            let pid = document.getElementsByTagName('pid')[0].innerText
+                            td.innerHTML = ''
 
-                    }
-                    else if (value == -1) {
-                        let pid = document.getElementsByTagName('pid')[0].innerText
-                        td.innerHTML = ''
+                            if (pid == 854 || pid == 530 && isSet(pid)) {
+                                const descBtn = document.createElement('button');
+                                descBtn.setAttribute('class', 'submit purch');
+                                descBtn.innerHTML = "خرید";
+                                descBtn.addEventListener('click', () => {
+                                    descModal('جهت تهیه ی این اقلام لطفا با بخش فروش ابزارآلات مارک زنی به شماره ی <span>08634132309</span> تماس حاصل فرمایید.')
+                                })
 
-                        if (pid == 854 || pid == 530 && isSet(pid)) {
-                            const descBtn = document.createElement('button');
-                            descBtn.setAttribute('class', 'submit purch');
-                            descBtn.innerHTML = "خرید";
-                            descBtn.addEventListener('click', () => {
-                                descModal('جهت تهیه ی این اقلام لطفا با بخش فروش ابزارآلات مارک زنی به شماره ی <span>08634132309</span> تماس حاصل فرمایید.')
-                            })
+                                td.append(descBtn)
+                            } else {
+                                td.innerHTML = '';
+                                const descBtn = document.createElement('button');
+                                descBtn.setAttribute('class', 'submit purch');
+                                descBtn.innerHTML = "خرید";
+                                descBtn.addEventListener('click', () => {
+                                    descModal('مشتری گرامی به دلیل محدودیت ابعادی و وزنی، متاسفانه امکان ارسال این محصول از طریق پست وجود ندارد. لطفا جهت خرید و هماهنگی شیوه ارسال، با شماره 25908-021 داخلی 110 تماس بگیرید یا از طریق شماره 09101507511 در واتساپ، با ما در ارتباط باشید.')
+                                })
 
-                            td.append(descBtn)
-                        } else {
-                            td.innerHTML = '';
-                            const descBtn = document.createElement('button');
-                            descBtn.setAttribute('class', 'submit purch');
-                            descBtn.innerHTML = "خرید";
-                            descBtn.addEventListener('click', () => {
-                                descModal('مشتری گرامی به دلیل محدودیت ابعادی و وزنی، متاسفانه امکان ارسال این محصول از طریق پست وجود ندارد. لطفا جهت خرید و هماهنگی شیوه ارسال، با شماره 25908-021 داخلی 110 تماس بگیرید یا از طریق شماره 09101507511 در واتساپ، با ما در ارتباط باشید.')
-                            })
-
-                            td.append(descBtn)
+                                td.append(descBtn)
+                            }
                         }
-                    }
-                    else {
-                        td.classList.add('unavailable')
-                        td.innerHTML = `<span><i class="icon icon-Ringtone"></i> ناموجود<span class="tooltip">موجود شد به من اطلاع بده</span> </span>`
-                        td.addEventListener('click', () => {
-                            showModal(CodeItem)
-                        })
+                        else {
+                            td.classList.add('unavailable')
+                            td.innerHTML = `<span><i class="icon icon-Ringtone"></i> ناموجود<span class="tooltip">موجود شد به من اطلاع بده</span> </span>`
+                            td.addEventListener('click', () => {
+                                showModal(CodeItem)
+                            })
+                        }
                     }
                     break;
                 case 'Code':
@@ -317,7 +332,10 @@ function RenderBody(Data, Lang) {
         }
 
         let Table = document.getElementById('boxTable')
-        SetEmpty(Table, 'محصولی با این مشخصات وجود ندارد')
+        if(Lang == 'en')
+            SetEmpty(Table, 'There is no product with this specification')
+        else
+            SetEmpty(Table, 'محصولی با این مشخصات وجود ندارد')
     } else {
         for (let i = 0; i < emptys.length; i++) {
             emptys[i].remove()

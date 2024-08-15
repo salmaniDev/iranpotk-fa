@@ -1,5 +1,5 @@
 import { Fetch, dLoading, loading } from "./Utils";
-
+let Lang = document.getElementsByTagName('lang')[0].innerText
 window.addEventListener('load', async () => {
     const navbar = window.iranPotkVar.navbar;
     const burgger = window.iranPotkVar.burgger;
@@ -59,7 +59,11 @@ window.addEventListener('load', async () => {
                 navbarMenuListHead.innerHTML = "";
                 let load = loading(navbarMenuListHead, 'S', '#E91924', '#fff')
 
-                let subMenu = await Fetch('GET', 'action=load_sub_subject&s_id=' + mainMenu[i].id, false, false, false)
+                let subMenu
+                if(Lang == 'en')
+                    subMenu = await Fetch('GET', 'action=load_sub_subject_en&s_id=' + mainMenu[i].id, false, false, false)
+                else
+                    subMenu = await Fetch('GET', 'action=load_sub_subject&s_id=' + mainMenu[i].id, false, false, false)
                 subMenu = subMenu.subMenu
 
                 if (subMenu.length !== 0) {
@@ -70,7 +74,10 @@ window.addEventListener('load', async () => {
 
 
                     linkItem.href = mainMenu[i].link;
-                    linkItem.innerHTML = `مشاهده همه ${mainMenu[i].title} <i class="icon icon-arrow_left"></i>`
+                    if(Lang == 'en')
+                        linkItem.innerHTML = `View ALL ${mainMenu[i].title} <i class="icon icon-arrow_left"></i>`
+                    else
+                        linkItem.innerHTML = `مشاهده همه ${mainMenu[i].title} <i class="icon icon-arrow_left"></i>`
 
 
                     for (let i = 0; i < subMenu.length; i++) {
@@ -86,7 +93,11 @@ window.addEventListener('load', async () => {
                             })
                             li.classList.add('active');
 
-                            let categoryProduct = await Fetch('GET', 'action=load_product&sb_id=' + subMenu[i].id, false, false, false)
+                            let categoryProduct
+                            if(Lang == 'en')
+                                categoryProduct = await Fetch('GET', 'action=load_product_en&sb_id=' + subMenu[i].id, false, false, false)
+                            else
+                                categoryProduct = await Fetch('GET', 'action=load_product&sb_id=' + subMenu[i].id, false, false, false)
                             if (categoryProduct.category.length !== 0) {
                                 renderProductMenu(categoryProduct, mainMenu[i].link)
                                 // renderProductMenu(categoryProduct, productLinkBototm, mainMenu[i].link)
