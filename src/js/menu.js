@@ -80,7 +80,7 @@ window.addEventListener('load', async () => {
 
                     linkItem.href = mainMenu[i].link;
                     if(Lang == 'en')
-                        linkItem.innerHTML = `View ALL ${mainMenu[i].title} <i class="icon icon-arrow_left"></i>`
+                        linkItem.innerHTML = `View ALL ${mainMenu[i].title} <i class="icon icon-arrow_right"></i>`
                     else
                         linkItem.innerHTML = `مشاهده همه ${mainMenu[i].title} <i class="icon icon-arrow_left"></i>`
 
