@@ -36,12 +36,12 @@
     .box {
         li {
             display: inline-block;
-            color: $black;
+            color: $red3;
             font-size: 12px;
             margin-left: 23px;
 
             a {
-                color: $desc8;
+                color: $black3;
                 transition: $transition;
 
                 &:hover {
